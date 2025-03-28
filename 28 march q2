@@ -1,0 +1,11 @@
+class Solution {
+  public:
+    // Function to count nodes of a linked list.
+    bool searchKey(int n, Node* head, int key) {
+        // Code here
+        while(head){
+            if(head->data == key) return 1;
+            head = head-> next;
+        }
+        return 0;
+    }
