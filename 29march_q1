@@ -1,0 +1,16 @@
+class Solution {
+  public:
+    // Function to reverse a doubly linked list
+    DLLNode* reverseDLL(DLLNode* head) {
+        // Your code here
+        DLLNode* temp = head;
+        while(temp){
+            head = temp;
+            DLLNode* x = temp->next;
+            temp->next = temp->prev;
+            temp->prev = x;
+            temp = x;
+        }
+        return head;
+    }
+};
